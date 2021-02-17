@@ -1,15 +1,22 @@
 {
-  "name": "node",
+  "name": "app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "14.15.3",
+    "npm": "6.14.10"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "micro": "^9.3.4"
   }
 }
