@@ -1,9 +1,17 @@
+require('dotenv').config();
 const express = require('express')
 const app = express()
+const path = require("path");
+const hbs = require("hbs");
+const templets_path = path.join(__dirname,"./Templets/partials");
+const partials_path = path.join(__dirname, "./Templets/partials");
 const port = process.env.PORT || 2000;
+app.set('view engine', '.hbs');
+app.set("views", templets_path);
+hbs.registerPartials(partials_path);
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render("index");
 })
 
 app.listen(port, () => {
