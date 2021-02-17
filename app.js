@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const path = require("path");
 const hbs = require("hbs");
-const templets_path = path.join(__dirname,"./Templets/partials");
+const templets_path = path.join(__dirname,"./Templets/views");
 const partials_path = path.join(__dirname, "./Templets/partials");
 const port = process.env.PORT || 2000;
 app.set('view engine', '.hbs');
