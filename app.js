@@ -46,37 +46,39 @@ app.get('/login', (req, res) => {
     res.render("login");
 })
 
-app.get('/register', (req, res) => {
-    res.render("register");
-})
-app.post('/register', async (req, res) => {
-    try {
-        const password = req.body.password;
-        const cpassword = req.body.confirmpassword;
-        if (password === cpassword) {
-            const reg = new register({
-                name: req.body.name,
-                email: req.body.email,
-                phone: req.body.phone,
-                roll: req.body.roll,
-                password: password
-            })
-            const token = await reg.generatetoken();
-            const registerd = await reg.save();
-            res.cookie("jwt",token ,{
-                //expires :new Date(Date.now()+700000),
-                httpOnly:true
-            });
-            console.log(cookie);
-            res.status(201).render("index");
-            //console.log(password)
-        } else {
-            console.log("password are not matching");
-        }
-    } catch (error) {
-        res.status(400).send(error);
-    }
-})
+//app.get('/register', (req, res) => {
+  //  res.render("register");
+//})
+//app.post('/register', async (req, res) => {
+//    try {
+//
+//        const password = req.body.password;
+//        const cpassword = req.body.confirmpassword;
+//
+//        if (password === cpassword) {
+//            const reg = new register({
+//                name: req.body.name,
+//                email: req.body.email,
+//                phone: req.body.phone,
+//                roll: req.body.roll,
+//                password: password
+//            })
+//            console.log(reg)
+//            const token = await reg.generatetoken();
+//            const registerd = await reg.save();
+//            res.cookie("jwt",token ,{
+//                //expires :new Date(Date.now()+700000),
+//                httpOnly:true
+//            });
+//            console.log(cookie);
+//            res.status(201).render("index");
+//        } else {
+//            console.log("password are not matching");
+//        }
+//    } catch (error) {
+//        res.status(400).send(error);
+//    }
+//})
 app.post('/login', async (req, res) => {
     try {
         const email = req.body.email;

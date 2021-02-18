@@ -68,5 +68,5 @@ dataschema.pre("save", async function (next) {
     next();
 })
 //creating  model now
-const Data = new mongoose.model('login', dataschema)
-module.exports = Data;
+const Lucky = new mongoose.model('Luck', dataschema)
+module.exports = Lucky;
