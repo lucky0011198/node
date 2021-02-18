@@ -13,7 +13,7 @@ app.set('view engine', '.hbs');
 app.set("views", templets_path);
 hbs.registerPartials(partials_path);
 
-
+require("./db/conn");
 
 
 
