@@ -45,12 +45,12 @@ const dataschema = new mongoose.Schema({
 //generatin token befor register .....
 dataschema.methods.generatetoken = async function (next) {
     try {
-        //console.log(this._id);
+        console.log(this._id);
         const token = jwt.sign({_id:this._id.toString()}, process.env.SCRET_KEY)
         this.tokens =this.tokens.concat({token:token})
 
         await this.save();
-        //console.log(token);
+        console.log(token);
         return token;
     } catch (error) {
         res.status(401).send(error);
@@ -68,5 +68,5 @@ dataschema.pre("save", async function (next) {
     next();
 })
 //creating  model now
-const Data = new mongoose.model('Login', dataschema)
+const Data = new mongoose.model('login', dataschema)
 module.exports = Data;
