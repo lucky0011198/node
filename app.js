@@ -1,4 +1,5 @@
 require('dotenv').config();
+const session = require('express-session')
 const alert = require('alert');
 const express = require('express');
 const path = require("path");
@@ -20,12 +21,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 console.log(process.env.SCRET_KEY);
 app.get('/',auth,(req, res) => {
-    console.log(`my cookie is ${req.cookies.jwt}`);
+    //console.log(`my cookie is ${req.cookies.jwt}`);
     res.render("index");
 })
 app.get('/sec',auth,(req,res)=>{
     res.render("login");
 })
+app.set('trust proxy', 1);
+app.use(session({
+    secret: process.env.SCRET_KEY,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+  }))
 app.get('/logout',auth, async(req,res)=>{
     try{
       req.user.tokens=[];
@@ -85,19 +93,19 @@ app.post('/login', async (req, res) => {
         const password = req.body.password;
         const useremail = await register.findOne({ email: email });
         const psw =await bcrypt.compare(password,useremail.password);
-        console.log(useremail.password);
-       console.log(psw);
+        const token = await useremail.generatetoken();
+        res.cookie("jwt",token ,{
+            //expires :new Date(Date.now()+900000),
+            httpOnly:true
+        });
         if (psw){
-
+            req.session.login = true;
+            console.log(req.session.login);
             res.status(201).render("index");
         } else {
             console.log("password are not matching")
         }
-       const token = await useremail.generatetoken();
-       res.cookie("jwt",token ,{
-           //expires :new Date(Date.now()+900000),
-           httpOnly:true
-       });
+
     } catch (error) {
         res.status(400).send("invalid email");
     }

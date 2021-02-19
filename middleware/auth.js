@@ -5,9 +5,8 @@ const auth = async(req,res,next)=>{
        const token= req.cookies.jwt;
        const varifyuser =jwt.verify(token, process.env.SCRET_KEY);
        console.log(varifyuser);
-
        const user = await Data.findOne({_id:varifyuser._id});
-       console.log(user.email);
+       console.log(token);
        req.token =token;
        req.user= user;
        next();

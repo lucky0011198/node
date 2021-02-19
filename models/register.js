@@ -3,6 +3,7 @@ const validator = require("validator");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+
 const dataschema = new mongoose.Schema({
     name: {
         type: String,
@@ -48,7 +49,6 @@ dataschema.methods.generatetoken = async function (next) {
         console.log(this._id);
         const token = jwt.sign({_id:this._id.toString()}, process.env.SCRET_KEY)
         this.tokens =this.tokens.concat({token:token})
-
         await this.save();
         console.log(token);
         return token;
@@ -64,6 +64,7 @@ dataschema.pre("save", async function (next) {
         console.log(this.password);
         this.password = await bcrypt.hash(this.password, 10);
         console.log(this.password);
+       
     }
     next();
 })
