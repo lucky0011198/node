@@ -31,18 +31,16 @@ app.set('trust proxy', 1);
 app.use(session({
     secret: process.env.SCRET_KEY,
     resave: false,
+    maxAge:10,
     saveUninitialized: true,
     cookie: { secure: true }
   }))
 app.get('/logout',auth, async(req,res)=>{
     try{
       req.user.tokens=[];
-      //for singal device logout......
-      //req.user.tokens = req.user.tokens.filter((currentemenent)=>{
-      //    return currentemenent.token != req.token
-      //})
       console.log(req.user);
       res.clearCookie("jwt");
+      res.clearCookie("connect.sid")
       alert("logout successfully");
       await req.user.save();
       res.render("login");
