@@ -46,56 +46,58 @@ app.get('/login', (req, res) => {
     res.render("login");
 })
 
-//app.get('/register', (req, res) => {
-  //  res.render("register");
-//})
-//app.post('/register', async (req, res) => {
-//    try {
-//
-//        const password = req.body.password;
-//        const cpassword = req.body.confirmpassword;
-//
-//        if (password === cpassword) {
-//            const reg = new register({
-//                name: req.body.name,
-//                email: req.body.email,
-//                phone: req.body.phone,
-//                roll: req.body.roll,
-//                password: password
-//            })
-//            console.log(reg)
-//            const token = await reg.generatetoken();
-//            const registerd = await reg.save();
-//            res.cookie("jwt",token ,{
-//                //expires :new Date(Date.now()+700000),
-//                httpOnly:true
-//            });
-//            console.log(cookie);
-//            res.status(201).render("index");
-//        } else {
-//            console.log("password are not matching");
-//        }
-//    } catch (error) {
-//        res.status(400).send(error);
-//    }
-//})
+app.get('/register', (req, res) => {
+     res.render("register");
+})
+app.post('/register', async (req, res) => {
+    try {
+
+        const password = req.body.password;
+        const cpassword = req.body.confirmpassword;
+
+        if (password === cpassword) {
+            const reg = new register({
+                name: req.body.name,
+                email: req.body.email,
+                phone: req.body.phone,
+                roll: req.body.roll,
+                password: password
+            })
+            console.log(reg)
+            const token = await reg.generatetoken();
+            const registerd = await reg.save();
+            res.cookie("jwt",token ,{
+                //expires :new Date(Date.now()+700000),
+                httpOnly:true
+            });
+            console.log(cookie);
+            res.status(201).render("index");
+        } else {
+            console.log("password are not matching");
+        }
+    } catch (error) {
+        res.status(400).send(error);
+    }
+})
 app.post('/login', async (req, res) => {
     try {
         const email = req.body.email;
         const password = req.body.password;
         const useremail = await register.findOne({ email: email });
-        const ismatch =await bcrypt.compare(password,useremail.password);
-        const token = await useremail.generatetoken();
-        res.cookie("jwt",token ,{
-            //expires :new Date(Date.now()+900000),
-            httpOnly:true
-        });
+        const psw =await bcrypt.compare(password,useremail.password);
+        console.log(useremail.password);
+       console.log(psw);
+        if (psw){
 
-        if (ismatch) {
             res.status(201).render("index");
         } else {
             console.log("password are not matching")
         }
+       const token = await useremail.generatetoken();
+       res.cookie("jwt",token ,{
+           //expires :new Date(Date.now()+900000),
+           httpOnly:true
+       });
     } catch (error) {
         res.status(400).send("invalid email");
     }
