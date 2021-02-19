@@ -45,6 +45,7 @@ app.get('/logout',auth, async(req,res)=>{
       await req.user.save();
       res.render("login");
   }catch(error){
+    res.render("error500");
       res.status(500).send(error);
   }
   })
@@ -82,6 +83,7 @@ app.post('/register', async (req, res) => {
             console.log("password are not matching");
         }
     } catch (error) {
+        res.render("error400");
         res.status(400).send(error);
     }
 })
@@ -101,10 +103,12 @@ app.post('/login', async (req, res) => {
             console.log(req.session.login);
             res.status(201).render("index");
         } else {
+            res.render("psw");
             console.log("password are not matching")
         }
 
     } catch (error) {
+        res.render("error400");
         res.status(400).send("invalid email");
     }
 })
