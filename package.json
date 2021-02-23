@@ -22,9 +22,11 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "hbs": "^4.1.1",
+    "install": "^0.13.0",
     "jsonwebtoken": "^8.5.1",
     "micro": "^9.3.4",
     "mongoose": "^5.11.17",
+    "node-pre-gyp": "^0.17.0",
     "react-native-looped-carousel": "^0.1.13",
     "validator": "^13.5.2"
   }
