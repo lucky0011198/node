@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>profile</title>
+    <!-- Custom fonts for this template-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="http://akshu.epizy.com/app/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="http://akshu.epizy.com/app/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <style>
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            /* The name of the animation */
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            /* The duration of the animation */
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            /* Make the element visible */
+            visibility: visible;
+        }
+
+        /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            /* The name of the animation */
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            /* The duration of the animation */
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            /* Make the element visible */
+            visibility: visible;
+        }
+    </style>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+
+
+
+        <!-- Nav Item - Utilities Collapse Menu -->
+
+
+
+        <!-- Divider -->
+
+
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+
+            <!-- Nav Item - Alerts >
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!- Counter - Alerts >
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            < Dropdown - Alerts >
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages >
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages >
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages >
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" viewBox="0 0 27 30">
+                        <g id="Icon_feather-user" data-name="Icon feather-user" transform="translate(-4.5 -3)">
+                            <path id="Path_12" data-name="Path 12" d="M30,31.5v-3a6,6,0,0,0-6-6H12a6,6,0,0,0-6,6v3"
+                                fill="none" stroke="#fefefe" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" />
+                            <path id="Path_13" data-name="Path 13" d="M24,10.5a6,6,0,1,1-6-6A6,6,0,0,1,24,10.5Z"
+                                fill="none" stroke="#fefefe" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" />
+                        </g>
+                    </svg>
+
+                </a>
+                <!-- Dropdown - User Information -->
+
+            </li>
+
+            </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+            <style>
+                #varkallaxmilant62gmailcom {
+                    float: left;
+                    margin-left: 100px;
+                }
+
+                #Laxmilant_varkal {
+                    font-size: 30px;
+                    float: left;
+                    padding-right: 10px;
+                    margin: 0%;
+                    color: rgb(82, 186, 255);
+                }
+
+                .table {
+                    font-size: 13px;
+                }
+
+                @media (max-width:360px) {
+
+                    #Laxmilant_varkal {
+                        font-size: 30px;
+                        float: left;
+                        padding-right: 10px;
+                        margin: 0%;
+                        font: 100;
+                    }
+
+                    .table {
+                        font-size: 12px;
+                    }
+
+                    tr {
+                        float: left;
+                    }
+
+                }
+
+                .main {
+                    width: 80%;
+                    margin: 50px auto;
+                }
+
+                /* Bootstrap 4 text input with search icon */
+
+                .has-search .form-control {
+                    padding-left: 2.375rem;
+                }
+
+                .has-search .form-control-feedback {
+                    position: absolute;
+                    z-index: 2;
+                    display: block;
+                    width: 2.375rem;
+                    height: 2.375rem;
+                    line-height: 2.375rem;
+                    text-align: center;
+                    pointer-events: none;
+                    color: #aaa;
+                }
+
+                .btn-primary {
+                    padding-right: 10px;
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                }
+            </style>
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <div style="display: inline;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 86 84"
+                        style="float:left; margin-right:10px">
+                        <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="43" cy="42" rx="43" ry="42" fill="#0b89e9"
+                            opacity="0.14" />
+                        <path id="Icon_awesome-user-alt" data-name="Icon awesome-user-alt"
+                            d="M22.1,25.093A12.547,12.547,0,1,0,9.671,12.547,12.494,12.494,0,0,0,22.1,25.093Zm11.052,2.788H28.4a14.907,14.907,0,0,1-12.589,0H11.052A11.1,11.1,0,0,0,0,39.034v1.394A4.165,4.165,0,0,0,4.145,44.61H40.064a4.165,4.165,0,0,0,4.145-4.182V39.034A11.1,11.1,0,0,0,33.156,27.881Z"
+                            transform="translate(21.581 16)" fill="rgba(17,61,242,0.98)" />
+                    </svg>
+
+                    <div id="Laxmilant_varkal">
+                        <span><b>
+                                <?php echo $_SESSION['name']?>
+                            </b></span>
+                        <p style="font-size:13px;color:black">
+                            <?php echo $_SESSION['mail']?>
+                        </p>
+                    </div>
+                </div>
+                <br><br><br>
+
+
+                <table class="table">
+                    <br>
+                    <thead>
+                        <tr>
+                            <th>user details</th>
+                            <th></th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>username</td>
+                        <td>:</td>
+                        <td>
+                            <?php echo $_SESSION['name']?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>:</td>
+                        <td>
+                            <?php echo $_SESSION['mail']?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>authontication</td>
+                        <td>:</td>
+                        <td>
+                            <?php echo $_SESSION['status']?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>subject</td>
+                        <td>:</td>
+                        <td>
+                            <?php echo $_SESSION['subject']?>
+                        </td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+
+
+            <div class="main">
+
+                <!-- Actual search box >
+          <h5><b> serch the student record</b></h5>
+            <hr>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter subject name">
+                            <div class="input-group-append">
+                              <button class="btn-primary" type="button">
+                                <i class="fa fa-search"></i>
+                              </button>
+                            </div>
+                          </div>
+
+
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+
+            <th>Date</th>
+            <th>status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+      </div>
+</div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="http://akshu.epizy.com/app/vendor/jquery/jquery.min.js"></script>
+    <script src="http://akshu.epizy.com/app/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="http://akshu.epizy.com/app/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="http://akshu.epizy.com/app/js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

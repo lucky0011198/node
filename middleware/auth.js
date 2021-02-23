@@ -9,6 +9,7 @@ const auth = async(req,res,next)=>{
        console.log(token);
        req.token =token;
        req.user= user;
+       console.log(user);
        next();
     }catch(error){
         res.render("error401");

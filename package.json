@@ -25,6 +25,7 @@
     "jsonwebtoken": "^8.5.1",
     "micro": "^9.3.4",
     "mongoose": "^5.11.17",
+    "react-native-looped-carousel": "^0.1.13",
     "validator": "^13.5.2"
   }
 }
