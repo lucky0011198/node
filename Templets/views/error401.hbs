@@ -2,235 +2,1225 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Theme Made By www.w3schools.com -->
+  <title>how to manage android devices</title>
+  <meta name="description" content="how to manage android device">
+  <meta name="keywords" content="storage , settings, uses, battery optimization">
+  <meta name="author" content="Laxmikant Varkal">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      font-family: Montserrat, sans-serif;
+    }
+
+    .footer {
+      background: #152F4F;
+      color: white;
+      padding: 3%;
+
+
+    }
+
+
+    .footer .links ul {
+      list-style-type: none;
+    }
+
+    .footer .links li a {
+      color: white;
+      transition: color 0.2s;
+    }
+
+    .footer .links li a:hover {
+      text-decoration: none;
+      color: #4180CB;
+    }
+
+    .footer .about-company i {
+      font-size: 25px;
+    }
+
+    .footer .about-company a {
+      color: white;
+      transition: color 0.2s;
+    }
+
+    .footer .about-company a:hover {
+      color: #4180CB;
+    }
+
+    .footer .location i {
+      font-size: 18px;
+    }
+
+    .footer .copyright p {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    View SCSS Code Resources body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .jumbotron {
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .container-fluid {
+      padding: 20px 50px;
+      margin: 0%;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+    }
+
+    .carousel-control.right,
+    .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+    }
+
+    .carousel-indicators li {
+      border-color: #1eb7f481;
+    }
+
+    .carousel-indicators li.active {
+      background-color: #0254ec6c;
+    }
+
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+
+    .item span {
+      font-style: normal;
+    }
+
+    .panel {
+      border: 1px solid #f4511e;
+      border-radius: 0 !important;
+      transition: box-shadow 0.5s;
+    }
+
+    .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+    }
+
+    .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+    }
+
+    .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    .panel-footer {
+      background-color: white !important;
+    }
+
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      background-color: #ffffff00;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+    }
+
+
+
+    .slideanim {
+      visibility: hidden;
+    }
+
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+
+    .sizing {
+      width: 300px;
+      margin: 0%;
+    }
+
+    .s {
+      margin-left: 17%;
+    }
+
+    .i {
+      width: 300px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+
+
+
+
+
+
+
+
+
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+
+      li {
+        background-color: rgba(0, 0, 0, 0.657);
+      }
+    }
+
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 1px;
+      }
+
+      .sizing {
+        width: 250px;
+        margin-top: 10px;
+        margin-left: 0;
+
+      }
+
+      .s {
+        margin-left: 0%;
+
+      }
+
+      .i {
+        margin-top: 10%;
+        text-align: center;
+      }
+
+      .m {
+        margin: 0%;
+        text-align: center;
+        float: none;
+      }
+
+      .r {
+        margin: 0%;
+        text-align: center;
+      }
+    }
+
+    .i {
+      text-align: center;
+      background-color: #4180CB;
+      margin: 0%;
+
+    }
+  </style>
+
+
+  <!-- Bootstrap CSS -->
 
 </head>
 
-<body>
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
 
-    html {
-      height: 100%;
-    }
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-    body {
-      min-height: 100%;
-    }
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"
+          style="background-color: rgb(255, 255, 255);">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="background-color: #5d68ff00;">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#setting">setting</a></li>
+          <li><a href="#gamer">gamers</a></li>
+          <li><a href="#battery">battery management</a></li>
+          <li><a href="#s">storage management</a></li>
+          <li><a href="#r">recent task</a></li>
+          <li><a href="#about">ABOUT</a></li>
 
-    body {
-      display: flex;
-    }
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    h1 {
-      font-family: "Cabin Sketch", cursive;
-      font-size: 3em;
-      text-align: center;
-      opacity: 0.8;
-      order: 1;
-    }
+  <div class="jumbotron text-center" style="background-image: url(register.png);">
+    <h1>Android</h1>
+    <p> how to manage Android device </p>
+  </div>
 
-    h1 small {
-      display: block;
-    }
+  <!-- Container (About Section) -->
+  <div id="home" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1><strong>how android system works</strong></h1><br>
+        <h4>The Android OS is a Linux-based mobile operating system that runs primarily on smartphones and tablets.
+          The Android platform includes the Android operating system (OS) and Its Linux kernel-based operating systems
+          as well as end-user applications that can be downloaded.
+          <br>
 
-    .site {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      flex-direction: column;
-      margin: 0 auto;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-    }
+          The Android Automotive OS is built directly into the car, just to be an app that connects to the smartphone
+          via Android Auto. This means that you do not need an Android-based phone for this usage; the operating
+          system can be written in Java, which is shown in initial demonstrations of Android, relatively easily on
+          inexpensive mobile phones with conventional number keys.
+          <br>
 
-    .sketch {
-      position: relative;
-      height: 400px;
-      min-width: 400px;
-      margin: 0;
-      overflow: visible;
-      order: 2;
-    }
+          <h4>we all know about Android devices and we use , but at certain age devices are slow down and some
+            times
+            it stucks ,This happens with every device If you're Android user you need to know how to use in proper way
+            to
+            manage and increase system performance , efficiency following tips can helpful for you to make your device
+            faster .. </h4><br>
 
-    .bee-sketch {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+          <!--button class="btn btn-default btn-lg">Get in Touch</button-->
+      </div>
+      <div class="col-sm-4" style=" text-align:center">
+        <div style="margin-top: 20px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 657.141 696.014">
+            <path id="Icon_zocial-android" data-name="Icon zocial-android"
+              d="M1.194,391.612V237.453q0-14.909,12.333-25.5a42.468,42.468,0,0,1,28.56-10.6q16.887,0,28.885,10.6,12.019,10.611,12.008,25.5V391.612q0,14.909-12.008,25.5-11.988,10.611-28.885,10.6T13.2,417.113Q1.183,406.5,1.194,391.612Zm112.294,57.308V209.372H486.072V448.919q0,14.909-12.008,25.5-12.019,10.611-28.885,10.6H154.361q-16.856,0-28.885-10.6T113.488,448.919Zm0-266.482H486.072q0-65.9-55.194-108.312-55.133-42.417-131.1-42.408T168.641,74.126Q113.478,116.542,113.488,182.438ZM179.047,1.345c0-3.062,1.521-4.585,4.544-4.585a11.41,11.41,0,0,1,4.544,1.146l31.806,51L210.2,53.495Q179.017,3.073,179.047,1.345Zm9.737,462.475q0-15.473,12.333-25.789t30.508-10.315a41.84,41.84,0,0,1,28.56,10.889q12.323,10.88,12.333,25.215V579.581a32.052,32.052,0,0,1-12.333,26.075q-12.323,10.02-30.508,10.029-16.887,0-28.885-10.6-12.018-10.611-12.008-25.5V463.819Zm3.246-355.309q0-9.16,7.789-15.76a27.32,27.32,0,0,1,18.175-6.59,26.088,26.088,0,0,1,17.85,6.59c4.99,4.406,7.465,9.653,7.465,15.76a20.924,20.924,0,0,1-7.465,16.333q-7.455,6.608-18.5,6.59a25.469,25.469,0,0,1-17.85-6.877C194.5,119.972,192.029,114.617,192.029,108.51ZM327.042,463.819q0-15.473,12.637-25.789,12.657-10.315,30.183-10.315,16.887,0,28.885,10.6,12.018,10.638,12.008,25.52V579.6c0,10.709-4.1,19.377-12.313,26.075q-12.323,10.02-30.508,10.029-16.887,0-28.885-10.6-12.018-10.611-12.008-25.5ZM356.231,108.51q0-9.16,7.809-15.76a27.32,27.32,0,0,1,18.175-6.59,26.124,26.124,0,0,1,17.85,6.59q7.454,6.608,7.465,15.76a20.547,20.547,0,0,1-7.789,16.333,27.229,27.229,0,0,1-18.175,6.59,25.434,25.434,0,0,1-17.85-6.877C358.747,119.972,356.231,114.617,356.231,108.51Zm23.388-59.6c.872-1.146,3.874-6.59,9.067-16.333A244.174,244.174,0,0,1,403.94,7.362c4.99-7.074,8.986-10.6,12.029-10.6s4.544,1.719,4.544,5.158V3.064l-31.157,51Zm136.96,342.7V238.026q0-14.909,12.008-25.789a43.757,43.757,0,0,1,57.77,0q12.019,10.88,12.008,25.789V391.612q0,14.909-12.008,25.5-12.019,10.611-28.885,10.6a43.216,43.216,0,0,1-29.189-10.6Q515.9,406.5,516.58,391.612Z"
+              transform="translate(-1.194 80.31)" fill="rgba(83,58,255,0.45)" />
+            <path id="Icon_zocial-android-2" data-name="Icon zocial-android"
+              d="M1.194,255.774V154.65a22.162,22.162,0,0,1,7.4-16.729,24.231,24.231,0,0,1,17.128-6.955,24.029,24.029,0,0,1,17.323,6.955,22.426,22.426,0,0,1,7.2,16.729V255.774a22.452,22.452,0,0,1-7.2,16.729,24.009,24.009,0,0,1-17.323,6.955A24.028,24.028,0,0,1,8.4,272.5,22.408,22.408,0,0,1,1.194,255.774ZM68.54,293.367V136.229H291.988V293.367a22.408,22.408,0,0,1-7.2,16.729,24.029,24.029,0,0,1-17.323,6.955H93.052A24.048,24.048,0,0,1,75.729,310.1,22.4,22.4,0,0,1,68.54,293.367Zm0-174.806H291.988q0-43.226-33.1-71.05-33.065-27.825-78.623-27.819T101.617,47.51Q68.534,75.335,68.54,118.561ZM107.857-.233c0-2.009.912-3.007,2.725-3.007a6.372,6.372,0,0,1,2.725.752l19.075,33.458-5.839,3.007Q107.839.9,107.857-.233ZM113.7,303.141a21.989,21.989,0,0,1,7.4-16.917,26.094,26.094,0,0,1,18.3-6.767,23.913,23.913,0,0,1,17.128,7.143q7.39,7.137,7.4,16.541v75.937c0,7.025-2.47,12.711-7.4,17.1s-11.034,6.579-18.3,6.579a24.029,24.029,0,0,1-17.323-6.955,22.408,22.408,0,0,1-7.2-16.729V303.141Zm1.946-233.075a13.624,13.624,0,0,1,4.671-10.338,15.567,15.567,0,0,1,10.9-4.323,14.887,14.887,0,0,1,10.705,4.323A13.86,13.86,0,0,1,146.4,70.066,14.3,14.3,0,0,1,141.92,80.78,15.3,15.3,0,0,1,130.825,85.1a15.35,15.35,0,0,1-15.182-15.037Zm80.971,233.075a21.712,21.712,0,0,1,7.579-16.917,26.287,26.287,0,0,1,18.1-6.767,24.029,24.029,0,0,1,17.323,6.955,22.451,22.451,0,0,1,7.2,16.741V379.09c0,7.025-2.457,12.711-7.384,17.1s-11.022,6.579-18.3,6.579a24.028,24.028,0,0,1-17.323-6.955,22.408,22.408,0,0,1-7.2-16.729ZM214.12,70.066A13.6,13.6,0,0,1,218.8,59.728,15.567,15.567,0,0,1,229.7,55.4a14.907,14.907,0,0,1,10.705,4.323,14.4,14.4,0,0,1-.195,21.052,15.516,15.516,0,0,1-10.9,4.323A15.372,15.372,0,0,1,214.12,70.066Zm14.026-39.1c.523-.752,2.324-4.323,5.438-10.714a163.711,163.711,0,0,1,9.148-16.541c2.993-4.64,5.389-6.955,7.214-6.955s2.725,1.128,2.725,3.383V.9L233.985,34.353Zm82.139,224.8V155.026a23,23,0,0,1,7.2-16.917,24.578,24.578,0,0,1,34.646,0,23,23,0,0,1,7.2,16.917V255.774a22.408,22.408,0,0,1-7.2,16.729,24.029,24.029,0,0,1-17.323,6.955A24.634,24.634,0,0,1,317.3,272.5,20.84,20.84,0,0,1,310.285,255.774Z"
+              transform="translate(297.806 3.24)" fill="rgba(83,58,255,0.19)" />
+          </svg>
 
-    .red {
-      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png) no-repeat center center;
-      opacity: 1;
-      animation: red 3s linear infinite, opacityRed 5s linear alternate infinite;
-    }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    OS tends to garner rave reviews from those who prefer the operating system and its ease, but many users of
+    IOS and Windows Phone argue that they can do just as much. Android is more popular today than Windows
+    phones, and Google is on to something as it rolls out to mobile devices around the world. The new system
+    provides a global developer community that has developed a wide range of apps for Android, as well as
+    Windows Phone, iOS and Android.
+    <br>
 
-    .blue {
-      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png) no-repeat center center;
-      opacity: 0;
-      animation: blue 3s linear infinite, opacityBlue 5s linear alternate infinite;
-    }
+    This is true in every way, and here are 10 unique features for the Android OS, along with some of the key
+    differences between it and other operating systems.
+    <br>
 
-    @media only screen and (min-width: 780px) {
-      .site {
-        flex-direction: row;
-        padding: 1em 3em 1em 0em;
-      }
+    Most Android devices support NFC, which allows you to easily interact with electronic devices such as a
+    phone, tablet, or even a tablet with a smartphone over short distances.
+    <br>
 
-      h1 {
-        text-align: right;
-        order: 2;
-        padding-bottom: 2em;
-        padding-left: 2em;
-      }
+    The operating system was originally developed for black and white phones that started with the latest
+    smartphones and minicomputers and have become one of the most popular mobile operating systems in the world.
+    Android is designed for mobile devices such as smartphones, tablets and tablets with NFC (Near Field
+    Communication) and is a Linux-based operating system.
 
-      .sketch {
-        order: 1;
-      }
-    }
+    <br>
+    Android is the software that was founded in 2003 in Palo Alto, California by Google Inc., the parent company
+    of Google, the world's most popular mobile operating system.
 
-    @keyframes blue {
-      0% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png);
-      }
+    <br>
+    Last but not least, the Android Market, the Android equivalent of Apple's App Store, is home to millions of
+    apps, many of which are completely free. Microsoft has released a vastly revised version of its software,
+    which falls under Android. It has been redesigned and rebuilt from scratch, with a greater emphasis on the
+    user experience, and the result is an operating system called Windows Phone.
+    <br>
 
-      9.09% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-2.png);
-      }
+    </h4>
 
-      27.27% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-3.png);
-      }
+    <p> IF your device having less internal and less ram they can follow this steps for improvment and for higher
+      ram and more internal devices can also follow the steps to achive smooth performance</p>
 
-      36.36% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-4.png);
-      }
 
-      45.45% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-5.png);
-      }
+  </div>
+  <div id="battery" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4" style=" text-align:center">
+        <div style="margin-top: 20px;">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"
+            viewBox="0 0 378.336 180.97">
+            <defs>
+              <filter id="Icon_metro-battery-two" x="0" y="0" width="378.336" height="180.97"
+                filterUnits="userSpaceOnUse">
+                <feOffset dy="3" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-color="#875959" flood-opacity="0.569" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_metro-battery-two)">
+              <path id="Icon_metro-battery-two-2" data-name="Icon metro-battery-two"
+                d="M351.94,56.979H338.081V42.163c0-16.356-12.418-29.631-27.718-29.631H33.181c-15.314,0-27.718,13.275-27.718,29.631V145.871c0,16.356,12.4,29.631,27.718,29.631H310.362c15.3,0,27.718-13.275,27.718-29.631V131.056H351.94c7.65,0,13.859-6.637,13.859-14.815V71.794c0-8.193-6.209-14.815-13.859-14.815Zm-27.718,88.893c0,8.178-6.209,14.815-13.859,14.815H33.181c-7.664,0-13.859-6.637-13.859-14.815V42.163c0-8.193,6.2-14.815,13.859-14.815H310.362c7.65,0,13.859,6.622,13.859,14.815Zm-291.041,0h83.154V42.163H33.181Zm97.014,0h83.154V42.163H130.194V145.871Z"
+                transform="translate(3.54 -6.53)" fill="#37ff80" />
+            </g>
+          </svg>
 
-      54.54% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-6.png);
-      }
 
-      63.63% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-7.png);
-      }
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <h1><strong>battery management</strong></h1><br>
+        <h4>You can work with your phone's settings, including Internet connection, screen brightness and timeouts, to
+          optimize setup according to your battery back up needs.
 
-      72.72% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-8.png);
-      }
+          Battery Optimizer Cleaner from Intel is a great battery-saving app for Android that lets you easily monitor
+          your mobile data usage, clean your memory and increase your mobile battery life for Android. The best features
+          include battery management, battery fuse, energy management and more.
 
-      81.81% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-9.png);
-      }
+          Kaspersky Battery Life is an app that not only saves your phone's battery but also increases it by monitoring
+          which apps are running on it. It comes with powerful features that optimize the phone to save as much battery
+          life as possible without compromising its performance. Give us an active warning to keep you informed of the
+          latest news, updates, security updates and other important information about your Android device.
 
-      100% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png);
-      }
-    }
+          The app consists of an "App Sucker" option that closes all apps that discharge your battery, and before you
+          can take appropriate action, you are notified that some apps suddenly use more battery than others, so you
+          don't have to worry.
 
-    @keyframes red {
-      0% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png);
-      }
+          There are other ways to fix your device's unsafe battery consumption. With a tap, you can boost and accelerate
+          the device's battery performance by using the widget that can be added to the home screen of any Android
+          smartphone.
 
-      9.09% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-2.png);
-      }
+          <br>
 
-      27.27% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-3.png);
-      }
 
-      36.36% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-4.png);
-      }
+          <!--button class="btn btn-default btn-lg">Get in Touch</button-->
+      </div>
 
-      45.45% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-5.png);
-      }
+    </div>
+  </div>
+  <div class="container-fluid">
+    If you have unnecessary apps running in the background, you will discharge your battery faster than usual. Increase
+    battery life by blocking apps that run in the background and make sure you don't have to run them.
+    <br>
+    If like me, you need a phone all the time and need to keep the battery longer, then you should try the battery app
+    Dfndr, which saves your battery through a battery management app like the Battery Manager on your phone. If you are
+    in a situation where there is a constant need for your phone and you need to keep the batteries long, this app will
+    work for you.
+    <br>
+    The Battery Management App Dfndr works in the same way as the Battery Manager on your phone but is a little more
+    advanced.
+    <br>
+    Battery protectors help you optimize your phone by showing the full picture of your battery consumption. The Android
+    app Kaspersky Battery Life switches the phone to more conservative use and gives tips for remaining life and habit -
+    and improves tips.
+    <br>
+    Adjust your phone to brighten or lengthen time - for example, when using news apps or social media, or for long
+    periods.
+    <br>
+    The AccuBattery app allows you to monitor how much battery your phone uses And what else you can find in the
+    settings of the app. The cool thing about this app is how you use it, you don't even have to turn the phone around
+    to turn on the savings mode. You can even turn off all the functions of your phone to instantly save more battery.
+    Sources: 5
+    <br>
+    It is also a good idea to charge the battery 100% and let it discharge completely at any time to make it last
+    longer. Android has a battery conservation mode that automatically adjusts the charging speed, battery usage and
+    other parameters that drain the battery. It tells you that you can use your device and do not have to be permanently
+    attached to the charging station.
+    <br>
+    If you understand what is causing battery drain and how to identify and mitigate the biggest causes, you will see
+    major improvements. It can be difficult to find apps that save your battery, as most battery-saving measures are
+    manual, including turning off screen brightness, turning off app sync frequency, and other proven - and - true
+    methods. First, Battery Saver tries to reduce the brightness and stop background processes that are running in the
+    background and are not being used.
+    <br>
+    If you want to try an app that could help you, here are some of the best battery saver apps for Android, along with
+    some tips and tricks, and a list of some other great battery management tools.
+    <br>
+    Android mobile battery saver app is practical and offers a - tap optimization to extend the battery life of your
+    smartphone. After installing the battery saver app, your phone will receive a Power Booster that increases your
+    energy savings by up to 60%. In addition to mobile power saving, it also allows you to use the app on other devices
+    such as tablets, laptops, smartphones and other mobile devices.
+    <br>
+    In addition, in Smart Save mode, you can analyze your battery and power consumption in the background, so that you
+    can sort out preventive measures in the app. Equipped with the best battery monitoring app on your current device,
+    you get detailed information about the battery condition in real-time.
 
-      54.54% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-6.png);
-      }
+  </div>
 
-      63.63% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-7.png);
-      }
+  <div id="s" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 slideanim" style=" text-align:center">
+        <div style="margin-top: 20px;">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"
+            viewBox="0 0 463.772 576.099">
+            <defs>
+              <filter id="Icon_material-sd-storage" x="0" y="0" width="463.772" height="576.099"
+                filterUnits="userSpaceOnUse">
+                <feOffset dx="7" dy="3" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-color="#3b3b3b" flood-opacity="0.851" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_material-sd-storage)">
+              <path id="Icon_material-sd-storage-2" data-name="Icon material-sd-storage"
+                d="M61,3H281L445.45,170.243,446,504.728c0,30.661-24.75,55.747-55,55.747H61c-30.25,0-55-25.086-55-55.747V58.748C6,28.086,30.75,3,61,3ZM226,170.243h55V58.748H226Zm-82.5,0h55V58.748h-55Zm-82.5,0h55V58.748H61Z"
+                transform="translate(-0.94 6.89)" fill="#6e00ff" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <h1> <strong>Storage optimization</strong></h1><br>
+        <h4> This is the most important Couse of every android device for slowe down your device and does not matter
+          how
+          faster
+          your phone is , if you
+          maintain less storage in device ,then Performance decrease and slow down.always try to keep atlist 40% space
+          free in your total storage this
+          will help to improve performance of device and faster </h4><br>
+        <p> Some phones have less internal storage this because they use additional SD card to increase storage of the
+          device.
+          If the SD card is chipper not in class 10 standard it makes your device slower ! Always use standard class
+          10
+          SD card to increase storage.
+          Uninstall unwanted application it will help you to clean up ram and storage in device and clean junk files
+          daily. Start using lite app ,clean app cache( This tips are applicable for less internal storage devices )
+        </p>
+        <p>
+          Fortunately, a careful approach to memory management can help you create space without losing the content
+          that is important to you. When it comes to memory management, the best starting point is in the settings of
+          your smartphone. You can check exactly how much memory you are using and what you have found in the phone's
+          memory menu.<br> <br>
+          By navigating to the Settings app on your Android device and clicking on the Storage option, you can get a
+          look at your storage. You can also freely explore how space is used, which should make it easier for you to
+          find areas where improvements can be made, whether you back up photos or just delete a few apps. Here are
+          some tips on how to stop apps from wasting precious space on an Android phone, making room for new apps,
+          photos, and other content, and even adding more storage to the device. <br> <br>
+          Above you can see how much of your phone's total memory was used, followed by the various categories that
+          take up space on your phones, such as photos, videos, music and music. <br>
+          <br>
+          Photos and videos occupy the largest space, followed by music and audio, and these have to do with file
+          management. When you free up space on your Android device, your phone has several functions it calls
+          "storage," and these functions are performed by you. These functions can be performed in different ways,
+          such as file storage, file sharing, or file access control.<br> <br>
+          A file manager app can help you clean your phone easily and create more storage space. It can scan your
+          device to remove duplicate files, identify unused apps that use up the space needed, and clean up your
+          contact list. This Google + file management app easily scans all your devices and gives you the ability to
+          share the space of your phone with just a few taps.
+        </p>
+        <!--button class="btn btn-default btn-lg">Get in Touch</button-->
+      </div>
 
-      72.72% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-8.png);
-      }
+    </div>
+  </div>
 
-      81.81% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-9.png);
-      }
 
-      100% {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png);
-      }
-    }
+  <div id="r" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 slideanim" style=" text-align:center">
+        <div style="margin-top: 20px;">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"
+            viewBox="0 0 609.009 514.152">
+            <defs>
+              <filter id="Icon_awesome-tasks" x="0" y="0" width="609.009" height="514.152" filterUnits="userSpaceOnUse">
+                <feOffset dx="5" dy="3" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-color="#756c6c" flood-opacity="0.969" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_awesome-tasks)">
+              <path id="Icon_awesome-tasks-2" data-name="Icon awesome-tasks"
+                d="M161.153,6.3a13.9,13.9,0,0,0-19.623,0L68.023,79.008,41.82,53.6a13.9,13.9,0,0,0-19.623,0L4.074,71.658a13.731,13.731,0,0,0,0,19.523l54.934,54.435a14.807,14.807,0,0,0,20.327,0l18-17.938,83.342-82.9a13.834,13.834,0,0,0,.1-19.523Zm0,182.817a13.9,13.9,0,0,0-19.623,0L68.023,262.3l-26.2-25.38a13.9,13.9,0,0,0-19.623,0L4.074,254.935a13.731,13.731,0,0,0,0,19.523l54.8,54.55a14.8,14.8,0,0,0,20.316,0l18.123-18.019L180.65,228.05a13.731,13.731,0,0,0,.1-19.408ZM73.876,388.152c-30.578,0-56.088,24.691-56.088,55.124S43.321,498.4,73.876,498.4a55.125,55.125,0,1,0,0-110.249ZM572.54,406.526H240.1A18.422,18.422,0,0,0,221.628,424.9v36.75A18.422,18.422,0,0,0,240.1,480.025H572.54a18.422,18.422,0,0,0,18.469-18.375V424.9A18.422,18.422,0,0,0,572.54,406.526Zm0-367.5H240.1a18.422,18.422,0,0,0-18.469,18.375V94.156A18.422,18.422,0,0,0,240.1,112.53H572.54a18.422,18.422,0,0,0,18.469-18.375V57.406A18.422,18.422,0,0,0,572.54,39.031Zm0,183.747H240.1a18.422,18.422,0,0,0-18.469,18.375V277.9A18.422,18.422,0,0,0,240.1,296.278H572.54A18.422,18.422,0,0,0,591.009,277.9v-36.75A18.422,18.422,0,0,0,572.54,222.779Z"
+                transform="translate(4 3.75)" fill="#10f" />
+            </g>
+          </svg>
+        </div>
+      </div>
 
-    @keyframes opacityBlue {
-      from {
-        opacity: 0;
-      }
+      <div class="col-sm-8">
+        <h1><strong> Background tasks managment</strong></h1><br>
+        <h4>Now a days lot of new features are available for the android device and all features run in background ,it
+          makes your
+          device slower,by turn off it take less ram and load on cpu decreases
+          <br> <br>
+          Mostly all smart features are run in background soo keep it turn off to operate device smoothly. Do not use
+          any third party app to increase system performance it will take more memory to manage ..
+        </h4><br>
+        <p> After closing the application still app is running at background eg. What'sapp Instagram .. all social
+          media<br>
+          apps it take more ram clean Thier cache regularly and make force stop <b>( long press in app -> click on app
+            info-> you will see force stop option click)</b> this make your device sleep during user attempting
+          another
+          tasks<br>
+        </p>
 
-      25% {
-        opacity: 0;
-      }
 
-      75% {
-        opacity: 1;
-      }
+        <!--button class="btn btn-default btn-lg">Get in Touch</button-->
+      </div>
 
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes opacityRed {
-      from {
-        opacity: 1;
-      }
-
-      25% {
-        opacity: 1;
-      }
-
-      75% {
-        opacity: 0.3;
-      }
-
-      to {
-        opacity: 0.3;
-      }
-    }
-  </style>
-  <div class="site">
-    <div class="sketch">
-      <div class="bee-sketch red"></div>
-      <div class="bee-sketch blue"></div>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+    <div class="row m">
+      <div class="col-sm-6 slideanim"><img src="6.jpg" class="i"></div>
+      <div class="col-sm-4 slideanim"><img src="7.jpg" class="i"></div>
     </div>
 
-    <h1>401:
-      <small>Unauthorized client page Not Found</small>
-    </h1>
   </div>
+  <div class="container-fluid">
+    <p>
+      Closing a running app manually helps with battery life, but Apple and Google have recently debunked that
+      myth. Your phone's system requires you to run the app when you reopen it, and manually close it to help your
+      battery life. Tap an app, press "Uninstall" to remove all the data generated by that app, and "Close" after
+      you close it.
+
+      Many Android apps, including Google Maps, Gmail, Google Play Store and many others, feature widgets that are
+      conveniently located on your home screen for real-time updates. The Recents Screen app is a collection of
+      all the activities and tasks you have recently accessed, as well as the current state of the app.
+
+      Android N's recent app key has grown into a bunch of awesome new ones, but how do you use the recent apps
+      feature in Android Pie to overview your apps by tapping the Home button and then swiping up? Your phone is
+      an integral part of the operating system, so you can see a deck of cards of all your recently used apps.
+      <br>
+      Android Launcher is the part of its interface that lets you launch apps, customize your home screen, receive
+      calls, and perform other tasks. On Samsung Galaxy phones, the latest-generation screen is usually referred
+      to as the overview screen in the Android operating system.
+
+      If the current apps button doesn't work on your Android phone, chances are that an update may have caused a
+      problem with the default launcher. In this case, you can switch to an alternative Android launcher that not
+      only helps you solve the problem, but also offers other features, such as the ability to customize the app
+      drawer and create custom shortcuts.
+      <br>
+      If your Android 11 phone is facing the problem that the newer apps of Android don't work, this quirky bug
+      may have started to sneak up on you.
+
+
+
+      On Android 10, you'll see a list of all the apps you've just opened, as well as an overview of what's going
+      on in each app. On Android 11, what you see at the bottom of the screen is a single flat line, and it has
+      recently opened all of your ongoing apps. Confirm that when you restart your phone, the current app function
+      will be maintained at work until you open the overview screen on Android 11. How to optimize the
+      multitasking window: A quick guide to how the new Multitasker window works on your Android phone.
+
+    </p>
+
+  </div>
+
+  <div id="p" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 slideanim" style=" text-align:center">
+        <div style="margin-top: 20px;">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"
+            viewBox="0 0 419.406 397.08">
+            <defs>
+              <filter id="Icon_material-power-settings-new" x="0" y="0" width="419.406" height="397.08"
+                filterUnits="userSpaceOnUse">
+                <feOffset dx="8" dy="4" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-opacity="0.502" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_material-power-settings-new)">
+              <path id="Icon_material-power-settings-new-2" data-name="Icon material-power-settings-new"
+                d="M227.5,4.5H182.9V215.1h44.6ZM335.214,50.2,303.548,80.105c35.235,26.746,57.758,67.813,57.758,113.935,0,81.5-69.8,147.42-156.1,147.42S49.1,275.542,49.1,194.04c0-46.121,22.523-87.188,57.535-114.145L75.192,50.2C31.929,84.949,4.5,136.336,4.5,194.04c0,104.668,89.87,189.54,200.7,189.54s200.7-84.872,200.7-189.54C405.906,136.336,378.477,84.949,335.214,50.2Z"
+                transform="translate(-3.5 0.5)" fill="#ff3030" />
+            </g>
+          </svg>
+        </div>
+
+      </div>
+      <div class="col-sm-8">
+        <h1><strong> benefits of factore hard Reset</strong></h1><br>
+        <h4> If you still facing slow down and lag then you need to reset device that will resolve all problems and
+          lags
+          in device
+          It is necessary for device to. Reset device in every 2-3 month it will help to keep your phone clean Make
+          hard reset that will clean all data. And backup data before reset </h4><br>
+        <p> factore reset will make device faster for some days but you follow all steps definetly helpfull to
+          resolve
+          all problems</p>
+
+        <!--button class="btn btn-default btn-lg">Get in Touch</button-->
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <p> <br>
+      A hardware or factory data reset prevents the new user of the smartphone from accessing personal information
+      and sets the phone as if it were brand new. In such a situation, it is best to first consider backing up
+      your data online to allow easy access to your next device. A hard reset can be performed to back up data and
+      remove all personal data such as photos, videos, contacts and other data from your smartphone before you
+      remove it yourself.
+      <br>
+      Android Factory Reset Protection (FRP) is one of the most important advantages of a hard reset or factory
+      data reset for Android smartphones. There are several options to perform hard resets and factory data resets
+      for your Android smartphone. ,
+      <br>
+      Factory Reset is in some cases only available to you and other people using your phone, and others perform a
+      factory reset without your permission.
+      <br>
+      This policy is designed to understand how we collect, communicate, disclose and use your personal
+      information. How we use and disclose your private information, such as your name, address, telephone number,
+      email address and telephone number, and how you use it.
+      <br>
+      This way, if your terminal is stolen, you may not use its access to your personal information in the way
+      that you would not if it were stolen. Google has introduced a factory reset process that is considered
+      insecure, so if a thief wants to perform a factory reset, his phone can block access completely. The process
+      is very simple and fast, and your device has the advantage of being new or not.
+      <br>
+      Nowadays, it is very unlikely that you have not heard about the factory reset of Android devices. We have
+      several articles that relate to this process that will bring performance improvements to your device and how
+      to do it on different phones. So this article will tell you that there are ways to reset your Android phone
+      to factory settings, what the benefits are of resetting the device completely, how it does that, and much
+      more. At the end of the article, there is an explanation about the benefits of factory resets of Android
+      phones, as well as the way they work.
+      <br>
+      An Android Factory Reset is a complete reset of your Android device that erases everything that has been
+      installed so far, such as all applications, photos and videos that have been taken. Performing a factory
+      data reset helps to completely erase everything on the device and reset all settings and data to their
+      default values.
+      <br>
+      While performing a factory reset can help solve a few other problems you may also experience, it is also
+      meant to help make your device faster. This helps the device to function better when loaded with all apps
+      and software that may have been installed over some time. Encrypt your Android system by going to Settings -
+      Security - Encrypted on your devices and find the Reset option. ,
+      <br>
+      It is also possible to find apps in the Google Play Store that promise to overwrite parts of the operating
+      system that have been marked as free but can still contain the original data. The way to format the memory
+      is to access the recovery mode of the device, but the results of both methods are the same.
+      <br>
+      For example, if you do not have access to the settings of your smartphone, forget your password or unlock
+      the pattern, or press the reset button for a long time, which is placed in the case of the phone, the device
+      will be reset. The user must perform a factory
+
+    </p>
+  </div>
+
+
+  <div id="gamers" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 slideanim" style=" text-align:center;">
+        <div style="margin-top: 20px;">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"
+            viewBox="0 0 467.695 441.29">
+            <defs>
+              <filter id="Icon_ionic-ios-settings" x="0" y="0" width="467.695" height="441.29"
+                filterUnits="userSpaceOnUse">
+                <feOffset dy="3" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-color="#191818" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_ionic-ios-settings)">
+              <path id="Icon_ionic-ios-settings-2" data-name="Icon ionic-ios-settings"
+                d="M417.072,216.09c0-23.143,15.341-42.869,37.123-50.8a209.059,209.059,0,0,0-27.755-62.926A61.781,61.781,0,0,1,402.9,107.1,59.843,59.843,0,0,1,362.031,91.23c-17.449-16.42-21.314-40.555-11.945-60.612A236.746,236.746,0,0,0,283.335,4.5c-8.315,20.388-29.394,34.934-53.987,34.934S183.675,24.888,175.361,4.5a237.483,237.483,0,0,0-66.869,26.118C117.978,50.565,114,74.81,96.547,91.23A59.633,59.633,0,0,1,55.676,107.1a59.766,59.766,0,0,1-23.539-4.739A213.615,213.615,0,0,0,4.5,165.4c21.665,7.824,37.123,27.551,37.123,50.8,0,23.143-15.341,42.869-37.006,50.8A209.059,209.059,0,0,0,32.372,329.93,61.521,61.521,0,0,1,55.793,325.3a59.843,59.843,0,0,1,40.871,15.869c17.332,16.31,21.314,40.555,11.945,60.5a238.872,238.872,0,0,0,66.869,26.118c8.315-20.388,29.277-34.824,53.87-34.824S274.9,407.4,283.217,427.79a237.482,237.482,0,0,0,66.869-26.118c-9.369-19.947-5.387-44.081,11.945-60.5A59.424,59.424,0,0,1,402.9,325.3a61.086,61.086,0,0,1,23.422,4.629A210.276,210.276,0,0,0,454.078,267C432.53,259.069,417.072,239.343,417.072,216.09ZM230.4,304.142c-51.879,0-93.687-39.563-93.687-88.163s41.808-88.163,93.687-88.163,93.687,39.563,93.687,88.163S282.281,304.142,230.4,304.142Z"
+                transform="translate(4.5 1.5)" fill="#240d9a" />
+            </g>
+          </svg>
+        </div>
+
+
+      </div>
+      <div class="col-sm-8" id="setting">
+        <h1> <strong> Best settings for android</strong> </h1><br>
+        <h4> Using some settings you can achieve smoothness and fast response in your device . Always turn off
+          animation
+          that will speed up device <br><b>( go to settings -> about phone->click 7 or more times on build number
+            that
+            will
+            activate developer options -> now go in addition settings ->. You will see developer options click on it
+            ->
+            Thier you see many options scroll down and click on animation scale -> set animation scale off
+            )<br>
+            in
+            developer options do some more changes . Turn on don't keep activities options and set background process
+            limited to
+            standard .. </h4><br>
+
+
+        <!--button class="btn btn-default btn-lg">Get in Touch</button-->
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container-fluid">
+    <p>
+
+      Smartphones and tablets make up for this by using significantly less battery, RAM and memory for the type of
+      apps you use. In the Play Store, you can find a lot of options to improve and create your device, but you
+      have to go to the developer option. If you want to do this and have an even better gaming experience, you
+      will want to disable the Background service option. Depending on the device, you will be looking for RAM
+      usage during the ongoing service process.
+      <br>
+      The Boost app has a great feature to make this change temporarily, so when you finish a game, the settings
+      will be restarted. Unlock the full power of Android with the best performance settings for Android phones
+      and tablets in the Play Store.
+      <br>
+      So let's see if PUBG Mobile plays lags on your Android device, and if so, you'll need to follow these
+      optimization tips to get a delay-free PUG Mobile experience on a slow Android device. If you are playing
+      PUBG Mobile on an Android device with over 2GB of RAM, you can play it at a much faster speed.
+      <br>
+      So to solve the problem of game delay, you need to clear the cache on your phone and go into recovery mode.
+      PUBG Mobile will lag on your phone when its cache overloads your device, so just delete it. To fix this, you
+      must first clear all the caches on your phone by simply deleting them.
+      <br>
+      Your device has the option to switch to restore mode, but that doesn't work in all cases. To see how you do
+      it and see if it works for you.
+      <br>
+      Turning off the battery saver will give your gaming performance a little boost while playing PUBG on your
+      phone. You can disable it by going to your phone's settings and disabling it in the Settings tab.
+      <br>
+      This removes unwanted files such as audio and video from the internal memory, which will boost the game. And
+      it will cause a slowdown in your phone's performance during the game.
+      <br>
+      There is an option in the game that allows you to clear the cache of your game, but it would be best if you
+      do this regularly to free up additional space in your phone and prevent it from slowing down and fix the
+      delay in Mobile Legends. Clearing the in-game cache removes delays in mobile legends, improves game
+      performance, frees up disk space, and frees up disk space.
+      <br>
+      This includes prioritizing the performance of the game at the expense of reducing graphics quality, as well
+      as the performance of the game itself, as in the case of Mobile Legends.
+      <br>
+      The latest version of Android is critical to speed and perhaps the fastest solution to this problem. To
+      speed up your slow Android phone, check for updates: Open the Settings app on your Android phone, and then
+      tap Software Updates. Sometimes Android updates improve performance and solve problems that could lead to
+      performance degradation.
+      <br>
+      This is especially true if you're trying to eat up a bit more life from an older Android device, but there
+      are several options available that you can check out the Settings app on your Android phone.
+      <br>
+      If you want to play PUBG Mobile without delay, you need to optimize your Android settings, and we'll show
+      you how to enable Hidden Developer Options on Android and use them to enhance your PUBG Mobile gaming
+      experience on Android. If you don't care about Android, then you won't be able to play PUPG mobile without
+      delay. The root cause of this is bebe the Android device because if you don't take care of it you won't be
+      able to play PUBG mobile without delay in the future.
+      <br>
+      With these recommendations, you can turn off the PUBG app and enjoy playing it without delay, or turn it on
+      and play without delay.
+      <br>
+      To make PUBG run smoothly on Android, select this option and disable battery optimization. Choose "PUBG
+      Mobile" and it will prove to be a responsible battery saver but at the expense of performance.
+      <br>
+      If you don't close one of these apps before turning it off, stay in the same state, slow down your phone and
+      zap your battery life.
+      <br>
+      You can see which apps take up the most space on your iPhone by tapping Manage Settings, Storage and
+      Storage. To find and close an app, double-click the Home button and then swipe to the right of the app. You
+      don't use it to close it. You can also take up more space by backing up photos and videos to a cloud
+      computer or deleting them from your phone.
+      <br>
+      Saving to your phone is now easier, as you have the latest operating system called Oreo, which has had its
+      first major update in recent months.
+
+    </p>
+
+  </div>
+  <div class="container">
+    <div class="row r">
+      <div class="col-sm-4 slideanim"><img src="1.png" class="i"></div>
+      <div class="col-sm-4 slideanim"><img src="2.png" class="i"></div>
+      <div class="col-sm-4 slideanim"><img src="3.png" class="i"></div>
+
+    </div>
+
+  </div>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="row r">
+      <div class="col-sm-6 slideanim"><img src="5.png" class="i"></div>
+      <div class="col-sm-4 slideanim"><img src="4.png" class="i"></div>
+    </div>
+
+  </div>
+  <br>
+  <br>
+
+
+  <div class=" container-fluid bg-grey" id="gamer">
+    <div class="row">
+      <div class="col-sm-4" style="text-align: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="229.641"
+          viewBox="0 0 465.144 229.641">
+          <defs>
+            <filter id="Icon_awesome-gamepad" x="0" y="0" width="465.144" height="229.641" filterUnits="userSpaceOnUse">
+              <feOffset dx="6" dy="3" input="SourceAlpha" />
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feFlood flood-color="#a79191" />
+              <feComposite operator="in" in2="blur" />
+              <feComposite in="SourceGraphic" />
+            </filter>
+          </defs>
+          <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_awesome-gamepad)">
+            <path id="Icon_awesome-gamepad-2" data-name="Icon awesome-gamepad"
+              d="M335.41,6.75H111.8C50.032,6.75,0,54.1,0,112.571S50.032,218.391,111.8,218.391a114.5,114.5,0,0,0,79.8-31.746h63.938a114.624,114.624,0,0,0,79.8,31.746c61.771,0,111.8-47.355,111.8-105.821S397.181,6.75,335.41,6.75ZM178.885,125.8a8.194,8.194,0,0,1-8.385,7.937H134.164v34.392a8.194,8.194,0,0,1-8.385,7.937H97.828a8.194,8.194,0,0,1-8.385-7.937V133.735H53.107a8.194,8.194,0,0,1-8.385-7.937V99.343a8.194,8.194,0,0,1,8.385-7.937H89.443V57.015a8.194,8.194,0,0,1,8.385-7.937h27.951a8.194,8.194,0,0,1,8.385,7.937V91.407H170.5a8.194,8.194,0,0,1,8.385,7.937Zm128.574,44.974c-18.517,0-33.541-14.22-33.541-31.746s15.024-31.746,33.541-31.746S341,121.5,341,139.026,325.977,170.772,307.459,170.772Zm55.9-52.91c-18.517,0-33.541-14.22-33.541-31.746s15.024-31.746,33.541-31.746S396.9,68.589,396.9,86.116,381.878,117.862,363.361,117.862Z"
+              transform="translate(3 -0.75)" fill="#10ff97" />
+          </g>
+        </svg>
+
+      </div>
+      <div class="col-sm-8">
+        <h2> <strong>Android gaming optimization</strong></h2><br>
+        <h4>If you're playing game like pubg ,call of duty then use GFX tools and decrease resolution to VGA level
+          640×480 (VGA) .
+          And set FPS according to your device capabilities this setting are useful for less hardware phones ie.
+          1-2
+          GB
+          RAM devices.</h4><br>
+        <p><strong></strong>The most common thing in android device is heating , it makes device slower and may
+          lag ,
+          to
+          fix this problem , we can purchase online additional fans for cooling and always play game without
+          backcover
+          that's helpful in cooling faster . If your device is less internal RAM and ROM.
+          Always keep graphics low and put minimum resolution, that decreases game quality but games can be played
+          very
+          smoothly . <br> <br>
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-grey">
+    <p>
+
+      Smartphones and tablets make them use significantly less battery, RAM and memory for the type of apps they
+      use. In the Play Store you can find a lot of options to improve and enhance your device, but to do that you
+      have to go to the developer option. Depending on the device, we can search the running services and
+      processes to find out how much RAM is used. If you want to have an even better gaming experience, you might
+      want to disable the background service option, but if you don't, you'll need to disable it.
+      The free GFX tool allows you to optimize otherwise hidden graphics settings to improve performance. The
+      Boost app has a great feature to make temporary changes so that settings revert to their original state when
+      you stop playing a game. <br> <br>
+      If you have a Samsung phone, you can use the Game Launcher app, which is included with the Samsung Galaxy S6
+      and S7 Edge as well as other Samsung devices. <br> <br>
+      You can log in to your favourite games, and when you play, you will be logged into Notifications. Most
+      mobile devices are not built-in - in memory for games you play, so there's usually no way to optimize your
+      phone's performance with the Game Launcher app on the Samsung Galaxy S6 and S7 Edge.
+      By using the optimization techniques in this guide, you can drastically reduce your storage requirements by
+      setting up your games properly. You will experience a significant performance improvement on a wide range of
+      devices, including new and old ones. <br> <br>
+      With the optimization techniques described in this guide, Disrupted Logic and Dead Corps 2 can run on old
+      low-power Android tablets, such as the Samsung Galaxy S3 and HTC One M9.
+      While developers only have to deal with a very limited number of hardware goals, releasing games for Android
+      requires optimization for different performance levels, especially if iOS comes along. Now, a new library in
+      the Android Game SDK will help developers improve the performance of their games on Android phones in a much
+      more streamlined way. In this blog post announced today, Android Performance Tuner gives game performance
+      insights from Android Vitals. <br> <br>
+      It optimizes Android by installing various games and performance-enhancing apps that are readily available
+      in the Google Play Store. These apps can be installed on your device, which will help to improve the quality
+      and graphics performance of the device. Many of these gaming boost applications have special features that
+      are only in action while playing on a device and you can also change their settings manually.
+      Depending on how you use your phone, you may notice a difference in the performance of on-the-go games and
+      other apps you may use daily. <br> <br>
+      The most notable difference maybe how long your battery lasts, but if you see an app that you don't use
+      regularly, it means it runs in the background of your device, draining the battery faster than it should.
+      Getting rid of unused, resource-intensive apps will go a long way to improving the performance of an Android
+      phone. I have installed and disabled numerous apps, and there has been no noticeable improvement in
+      performance. <br> <br>
+      If you follow the above-mentioned suggestions, these tips and improvements will help you make your Android
+      faster and smoother while using it. The more free storage the phone has to increase its battery performance,
+      the more it needs to use, and the better. <br> <br>
+      Android users are very interested in their apps, so check out these suggestions that every designer, blogger
+      and photographer lover should try. <br> <br>
+      Both paid and free game optimizers can significantly improve the performance of your device while playing.
+      In - Less graphic details can be a problem, so to save time, prepare a Game Booster app for Android, iOS and
+      Windows Phone 8.0. The best you need when it comes to game boosters for your Android app is to save you some
+      time by preparing for the worst game performance on your Android phone or tablet.
+      If there is something that is not optimized, the game speed will not look as great as it could and will
+      stutter or even stutter. This letter will introduce you to the Game Optimizing Service for Android phones,
+      which will make your Android device faster for gaming and increase your gaming performance. You can increase
+      your game performance and play your favourite games without dropping frames by using popular games - Speed
+      Booster Apps.
+
+
+    </p>
+  </div>
+
+  <!-- Container (Services Section) -->
+
+  <!-- Container (Portfolio Section) -->
+
+  <!-- Container (Pricing Section) -->
+
+  <!-- Container (Contact Section) >
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row" style="background-color: #303030;">
+      <div class="col-sm-3">
+        <p>laxmikant varkal</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> india maharashatra</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +91 9325750978</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> varkallaxmikant62@.com</p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <p>Find me on social media.</p>
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+
+        <p> check out my links<br><a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div-->
+
+  <!-- Image of location/map >
+    <img src="about.png" class="w3-image w3-greyscale-min" style="width:100%"-->
+
+
+  <!--a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a-->
+
+
+  <div class="mt-10 pt-10 pb-10 footer" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 about-company">
+          <h2 style="color: white;">About us </h2>
+          <p class="pr-5 text-white-50">follow me in social media links given </p>
+          <p>
+            <!--a href="#"><i class="fa fa-facebook-square mr-1"></i> </a--> <a
+              href="https://www.linkedin.com/in/laxmikant-varkal-489a8a1a5/"><i
+                class="fa fa-linkedin-square  mr-1"></i></a>
+            <a href="https://github.com/lucky0011198"><i class="fa fa-github-square  mr-1"></i></a>
+            <a href="https://www.instagram.com/lucky382001/"><i class="fa fa-instagram  mr-1"></i></a>
+          </p>
+          <p>If you have any query regrading Site, Advertisement and any other issue, please feel free to contact
+            at <strong>varkallaxmikant62@gmail.com</strong></p>
+        </div>
+
+        <br>
+        <div class="col-lg-4 col-xs-12 location">
+          <h2 class="mt-lg-0 mt-sm-4" style="color: white;">Contact us</h2>
+          <p> Maharashtra 388/3 'A' new vidi garkul solapur</p>
+          <p class="mb-0"><i class="fa fa-phone mr-3"></i> (+91) 9325750978</p>
+          <p><i class="fa fa-envelope-o mr-3"></i> varkallaxmikant62@.com</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col copyright">
+          <p class=""><small class="text-white-50">
+              <h2>DMCA</h2>
+              <p>If we Have added some content that belong to you or your organization by mistake, We are sorry for
+                that. We apologize for that and assure you that this wont be repeated in future. If you are rightful
+                owner of the content used in our Website, Please mail us with your Name, Organization Name, Contact
+                Details, Copyright infringing URL and Copyright Proof (URL or Legal Document) at
+                <strong>varkallaxmikant62@gmail.com</strong>
+              </p>
+              <p>I assure you that, I will remove the infringing content Within 48 Hours.</p>
+
+
+            </small></p>
+          <a href="Privacy-Policy.html">privecy & policy..<i class="fa fa-external-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+  </div>
+
+
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    })
+  </script>
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
